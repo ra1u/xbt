@@ -18,6 +18,9 @@ if(HAVE_SYSTEMD)
 endif()
 # set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pedantic -Wall -Wextra")
 # set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Werror -Wno-implicit-fallthrough -Wno-parentheses -Wno-sign-compare")
+
+link_directories(/usr/local/lib/mysql)
+
 add_executable(
 	xbt_tracker
 	../misc/bt_misc.cpp
@@ -36,7 +39,6 @@ add_executable(
 target_link_libraries(
 	xbt_tracker
 	mysqlclient
-	systemd
 	z
 )
 install(TARGETS xbt_tracker DESTINATION bin)

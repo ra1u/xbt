@@ -3,6 +3,7 @@
 #include <boost/utility.hpp>
 #include <memory>
 #include <string>
+#include <array>
 #include <xbt/data_ref.h>
 
 #ifdef WIN32
